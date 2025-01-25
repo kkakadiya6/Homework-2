@@ -88,14 +88,22 @@ def B(a5):
     B = a1*A - a2*A**(2/3) - a3*(Z**2)/(A**(1/3)) - a4*((A-2*Z)**2)/A + a5/(A**(1/2))
     return(B)
 
+def B(a5):
+    B = a1*A - a2*A**(2/3) - a3*(Z**2)/(A**(1/3)) - a4*((A-2*Z)**2)/A + a5/(A**(1/2))
+    return(B)
+
 if A % 2 != 0:
-    print(B(a5Aodd),"MeV")
+    print("The binding energy is:",B(a5Aodd),"MeV")
+    print("The binding energy per nucleon B/A is:",B(a5Aodd)/A,"MeV")
     
 elif A % 2 == 0 and Z % 2 == 0:
-    print(B(a5AZeven),"MeV")
+    print("The binding energy is:",B(a5AZeven),"MeV")
+    print("The binding energy per nucleon B/A is:",B(a5AZeven)/A,"MeV")
     
 elif A % 2 == 0 and Z % 2 != 0:
-    print(B(a5AevenZodd),"MeV")
+    print("The binding energy is:",B(a5AevenZodd),"MeV")
+    print("The binding energy per nucleon B/A is:",B(a5AevenZodd)/A,"MeV")
+
 
 
 # %% [markdown]
